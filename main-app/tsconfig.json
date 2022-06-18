@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@tracking": ["./tracking/index.ts"]
+    }
+  }
+}
