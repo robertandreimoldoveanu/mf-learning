@@ -6,6 +6,7 @@ const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
     publicPath: "http://localhost:3002/",
+    clean: true,
   },
 
   resolve: {
@@ -16,7 +17,8 @@ module.exports = {
   },
 
   optimization: {
-    runtimeChunk: false,
+    chunkIds: 'named',
+    minimize: false,
   },
 
   devServer: {
