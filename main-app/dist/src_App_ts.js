@@ -1,29 +1,12 @@
 "use strict";
 (self["webpackChunkhost"] = self["webpackChunkhost"] || []).push([["src_App_ts"],{
 
-/***/ 729:
+/***/ 276:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-;// CONCATENATED MODULE: ./tracking/index.ts
-function initCustomTracking() {
-  return new Promise(function (resolve) {
-    // setup some listeners
-    document.addEventListener("visibilitychange", function () {
-      if (document.hidden) {
-        console.log("Browser tab is hidden");
-      } else {
-        console.log("Browser tab is visible");
-      }
-    }); // perform some registration logic
-
-    setTimeout(function () {
-      resolve();
-    }, 1000);
-  });
-}
 // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
 var injectStylesIntoStyleTag = __webpack_require__(379);
 var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
@@ -75,12 +58,14 @@ var update = injectStylesIntoStyleTag_default()(cjs_js_src/* default */.Z, optio
 
 ;// CONCATENATED MODULE: ./src/App.ts
 
-
-initCustomTracking().then(function () {
-  console.log("tracking is on");
-  var p = document.createElement("p");
-  p.innerText = "we have tracking";
-  document.querySelector("#app").appendChild(p);
+__webpack_require__.e(/* import() */ "tracking_index_ts").then(__webpack_require__.bind(__webpack_require__, 284)).then(function (_ref) {
+  var initCustomTracking = _ref.initCustomTracking;
+  initCustomTracking().then(function () {
+    console.log("tracking is on");
+    var p = document.createElement("p");
+    p.innerText = "we have tracking";
+    document.querySelector("#app").appendChild(p);
+  });
 });
 
 /***/ }),
