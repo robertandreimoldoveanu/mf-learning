@@ -22,6 +22,17 @@ We could also use some sort of cloud function, or an nginx routing layer, that p
 
 **note:** downside here is that we will need to start _actually publishing_ the apps that federate content. This means we also need to establish a cadence (the spectrum is broad, from publishing once per release, to once per sprint, to once per `merge` commit into the main release branches and even on demand).
 
+### Alternative Versioning
+
+Another versioning method which, depending on teams and preferences, might work or might fail completely, is to version what you federate in your code. Say you have a `<Catalog>` component, that renders a list of products. As long as you do not introduce any breaking changes, and only add properties, you can use live federation with no problems. 
+
+But what if there comes a time when that component needs a bigger refactor? You might publish a `<CatalogV2>`, which is a wrapper over the `<Catalog>` that adds, removes or modifies behaviour.
+
+I know, it's not at all a great idea, but it might be viable if you:
+* do not want live federation
+* do not want to version the federated modules
+* expect breaking changes to happen in the federated code
+
 ## To version or not the version the federated remote?
 
 ### Pros
